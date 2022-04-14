@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:rgb(224, 100, 33);
+        }
+        .box{
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+            border: none;
+            background-color: rgb(232, 120, 120);
+            color: blueviolet;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="z3339402851721_92739fa1a7dfff4d2c0d14b320b5fd2d.jpg" alt="" /> -->
+    <div class="box">
+        <p>
+            ĐẠT , NGUYÊN, HẢI, TUẤN hot boy không?
+        </p>
+        
+        <p id="JaneAusten" style="display: none;">
+         Đạt hot boy, Nguyên gu vái loz, hải đòu bùi, tuấn con cạc
+        </p>
+    
+        <button id="btn">Chuẩn đoán</button>
+    </div>
+    <script>
+      const myText = document.getElementById("JaneAusten").textContent;
+
+      function readToMe(text) {
+        let utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(utterance);
+      }
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        readToMe(myText);
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
